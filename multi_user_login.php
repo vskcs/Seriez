@@ -8,7 +8,6 @@
             }else{
                     //go to user page
                     header('location: userPage.php');
-                
             }
         }
         //Include the connectionDB only once not on further visits to this same webpage
