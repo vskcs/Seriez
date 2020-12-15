@@ -5,6 +5,7 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
+        $message = $conn->real_escape_string($message);
         //store in database
         $insertCommand = "INSERT INTO comments(name, email, message) VALUES('$name', '$email', '$message')";
         
