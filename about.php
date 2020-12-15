@@ -33,12 +33,12 @@
   </script>
 
 <div class="text-center">
-<div class="jumbotron">
+<div style="background-color: white !important; opacity:0.8"  class="jumbotron">
     <h1 class="display-3">About <i>SERIEZ...</i></h1>
     <p class="lead">Seriez is a website based on Webseries Management System</p>
     <hr class="my-2">
     <h3>Here, we have admin and user authentication functionalities.<br> A user can login and can view the webseries. The admin can add/delete the webseries.</h3>
-    <p>This website is made by using HTML, CSS, PHP, JavaScript, Ajax Bootstrap and mySQL</p>
+    <p>This website is made by using HTML, CSS, PHP, JavaScript, Ajax, Bootstrap and mySQL</p>
     <hr class="my-2">
 
     <h1 class="display-4">About the Creator</h1>
