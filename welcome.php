@@ -7,7 +7,7 @@
 </head>
 
 <div class="text-center">
-<div class="jumbotron" opacity="0.5">
+<div style="background-color: white !important; opacity:0.8" class="jumbotron" >
     <h1 class="display-3">Welcome to SERIEZ </h1>
     <p class="lead">View various webseries data available in our database</p>
     <hr class="my-2">
