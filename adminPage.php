@@ -37,7 +37,7 @@ include('navBar.php');
 </style>
 <body>
 <div class="text-center">
-    <div class="jumbotron">
+    <div style="background-color: white !important; opacity:0.9" class="jumbotron">
     <h1 class="display-3">Welcome to Admin Page</h1>
     <p class="lead">Add/View various webseries data available in our database</p>
     <hr class="my-2">
