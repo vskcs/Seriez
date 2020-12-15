@@ -79,9 +79,11 @@ if($result1->num_rows < 1){
     text-align: center;
     width: 100%;
     margin:auto;
+    height: 200px;
     margin-bottom: 10px; 
-    background-color: var(--info);
-   
+    background-image: url('./images/nflines.jpg');
+    background-size: cover;
+   cursor: pointer;
 }
 .star{
 
@@ -113,32 +115,25 @@ if($result1->num_rows < 1){
 <div class="row-md">
     <div class="col-md-15">
         <div class="card card-body pb-0">
-            <div class="top">
-              
-            <h1 class="text-center title"><?php echo $row['series_name'];?></h1>
-           
-            <p class="rating"><span class="star"><i class="fas fa-star fa-2x"></i></span><?php echo $row['rating'];?></p>
-            <div class="genres">
+            <div class="top" onclick="showVideo();">              
+            <br><h1 class="text-center title"><?php echo $row['series_name'];?></h1><br>
+                 <div class="genres">
             <h4 class="rating">Genres:
             <?php while($row1 = $result1->fetch_assoc()){?>
                <span class="badge <?php echo $row1['genre_id']%2==0 ? "badge-dark" :  "badge-warning"; ?>"> <?php echo $row1['genre_name'];?></span>
-         
-             
             <?php } ?>
             </h4>
-            <button class="btn btn-dark right" onclick="showVideo();">
-                    Click here
-                </button>
-            <p class="right text-light mb-0 mr-2">To view/hide the video (toggle)</p>
-           
+            <h5 class="text-white mt-2"><?php echo $row['description'];?></h5>
             </div>
             </div>
-            <p class="text-light bg-success date">Published on <?php echo date_format(date_create($row['publish_date']), "h:i:s A l F Y")?></p>
-            <h5 class="text-dark mt-2"><?php echo $row['description'];?></h5>
+            
             <div class="desc">
-                <p class="round bg-info text-light">Number of seasons: <?php echo $row['seasons'] ?></p>
+            <p class="round bg-warning text-dark">Rating: <?php echo $row['rating'] ?></p>
+            //<p class="round bg-warning text-dark">Jonre: <?php echo $row['genre'] ?></p>
+                <p class="round bg-warning text-dark">Number of seasons: <?php echo $row['seasons'] ?></p>
                 <p class="round bg-warning text-dark">Total number of episodes: <?php echo $row['episodes'] ?></p>
-                <p class="round bg-dark text-light">Duration of each episode: <?php echo $row['duration'] ?> minutes(approx).</p>
+                <p class="round bg-warning text-dark">Duration of each episode: <?php echo $row['duration'] ?> minutes</p>
+                <p class="round bg-warning text-dark">Published on: <?php echo $row['publish_date'] ?></p>
             </div>
         </div>
     </div>
