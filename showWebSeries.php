@@ -21,21 +21,23 @@ if(isset($_POST['search'])){
   <head>
   <title>Search</title>
     <style>
-    .grid-2 {
+    .grid-3 {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 1rem;
     }
     .search{
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        align: center;
         /* text-align: center; */
         margin: 20px auto;
+        margin-left : 500px ;
        }
        .searchBtn{
-        width: 50%;
+        width: 20%;
         margin: auto;
         margin-left: 2%;
         border: none;
@@ -55,7 +57,6 @@ if(isset($_POST['search'])){
     </style>
   </head>
   <body>
-  <h4 class="text-center text-success float-right mr-3 mt-4 bg-dark rounded">&nbsp Total Webseries available in the DB : <?php echo $total_videos; ?>  &nbsp</h4>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
   <div class="search">
     <input class="form-control" type="search" name="searchItem" placeholder="Search" required>
@@ -66,7 +67,7 @@ if(isset($_POST['search'])){
 <?php if($error != ""){?>
 <h2 class="error text-center"><?php echo $error;?></h2>
 <?php }?>
-<div class="grid-2">
+<div class="grid-3">
 <?php
      while($row = $fetchVideos->fetch_assoc()){
        ?>
