@@ -38,7 +38,7 @@
     <p class="lead">Seriez is a website based on Webseries Management System</p>
     <hr class="my-2">
     <h3>Here, we have admin and user authentication functionalities.<br> A user can login and can view the webseries. The admin can add/delete the webseries.</h3>
-    <p>This website is made by using HTML, CSS, PHP, JavaScript, Bootstrap, EJS and MongoDb</p>
+    <p>This website is made by using HTML, CSS, PHP, JavaScript, Ajax Bootstrap and mySQL</p>
     <hr class="my-2">
 
     <h1 class="display-4">About the Creator</h1>
